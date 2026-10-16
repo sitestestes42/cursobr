@@ -27,11 +27,12 @@ Comandos úteis:
 
 ## Supabase
 
-O app roda em **modo local** por padrão e persiste o progresso no navegador. Para autenticação por link mágico e sincronização entre dispositivos:
+O app roda em **modo local** por padrão e persiste o progresso no navegador. Para cadastro/login com e-mail e senha e sincronização entre dispositivos:
 
 1. Execute [`supabase/schema.sql`](./supabase/schema.sql) no SQL Editor do Supabase.
 2. Configure `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` na Vercel.
-3. Faça novo deploy.
+3. Em **Authentication → Providers → Email**, desative **Confirm email** para que o cadastro funcione sem confirmação.
+4. Faça novo deploy.
 
 Consulte [`DEPLOY_VERCEL.md`](./DEPLOY_VERCEL.md) para o passo a passo. A chave `service_role` nunca deve ser usada no browser.
 
@@ -39,7 +40,7 @@ Consulte [`DEPLOY_VERCEL.md`](./DEPLOY_VERCEL.md) para o passo a passo. A chave 
 
 - `client/src/data/course.ts`: currículo completo, referências, aulas, quizzes e projetos.
 - `client/src/components/AppShell.tsx`: navegação desktop/mobile.
-- `client/src/pages/CoursePages.tsx`: dashboard, trilha, aula, exercícios, editor, projetos, avaliações, certificado e perfil.
+- `client/src/pages/CoursePages.tsx`: dashboard, trilha, aula, exercícios, editor, projetos, avaliações e perfil.
 - `client/src/lib/progress.tsx`: persistência local e sincronização opcional com Supabase.
 - `supabase/schema.sql`: tabelas e RLS do progresso.
 - `vercel.json`: build estático e fallback SPA.

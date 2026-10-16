@@ -2,7 +2,7 @@
 
 ## Plataforma navegável e identidade visual
 
-- [x] A aplicação está em português brasileiro, com navegação entre visão geral, trilha, módulos, aula, exercícios, editor, projetos, dashboard, perfil, avaliações, certificado e validação pública.
+- [x] A aplicação está em português brasileiro, com navegação entre visão geral, trilha, módulos, aula, exercícios, editor, projetos, dashboard, perfil e avaliações.
 - [x] A interface tem design terminal editorial moderno, hierarquia tipográfica clara, espaçamento consistente, contraste adequado, responsividade desktop/mobile, foco visível e estados de modo local, sucesso, erro, vazio e conteúdo bloqueado.
 - [x] A página inicial explica a proposta do curso, mostra progresso real e aponta para a próxima aula sem despejar o conteúdo completo.
 
@@ -21,18 +21,18 @@
 - [x] O editor permite HTML, CSS e JavaScript, execução em preview, restauração e isolamento em `iframe sandbox`; as aulas oferecem dicas e soluções comentadas.
 - [ ] Adicionar no editor uma comparação automática entre código enviado e solução ideal para cada prática guiada.
 
-## Projetos, avaliações e certificado
+## Projetos e avaliações
 
 - [x] Existem projetos de página pessoal, landing page, calculadora, lista de tarefas, empresa fictícia, portfólio e projeto final publicado.
 - [x] Cada projeto expõe descrição, objetivo, requisitos, etapas, checklist, critérios de avaliação, referência e campo para URL publicada.
 - [x] Existem avaliações por módulo e avaliação final cumulativa; elas corrigem, exibem nota, feedback, recomendação e permitem refazer.
-- [x] O certificado fica bloqueado até concluir as 41 aulas e pelo menos um projeto; quando liberado, contém nome, curso, data, carga horária estimada, ID único e página pública de validação.
+- [x] O certificado foi removido para manter o produto simples e não sugerir uma certificação oficial.
 
 ## Persistência e Supabase
 
-- [x] O progresso é persistido em `localStorage` durante o modo demonstração e sincronizado com Supabase quando `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` estiverem configurados e o usuário autenticado.
+- [x] O progresso é persistido em `localStorage` durante o modo local e sincronizado com Supabase quando `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` estiverem configurados e o usuário entrar com e-mail e senha.
 - [x] O SQL do Supabase cria tabelas de progresso e projetos com políticas RLS para que cada aluno veja e altere apenas seus próprios registros.
-- [x] A interface indica claramente quando está em modo local e orienta a configuração sem simular uma sincronização bem-sucedida.
+- [x] O perfil oferece cadastro, login e saída com e-mail e senha; a interface mantém o modo local quando o Supabase não está configurado.
 - [ ] O usuário ainda precisa executar `supabase/schema.sql` e cadastrar as duas variáveis públicas na Vercel.
 
 ## Qualidade e entrega

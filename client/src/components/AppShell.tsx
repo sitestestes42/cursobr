@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { BookOpen, Braces, CheckCircle2, ChevronRight, CircleUserRound, Code2, FolderKanban, Home, LayoutDashboard, Menu, PanelLeftClose, Sparkles, Trophy, X } from "lucide-react";
+import { BookOpen, Braces, CheckCircle2, ChevronRight, CircleUserRound, Code2, FolderKanban, Home, LayoutDashboard, Menu, PanelLeftClose, Trophy, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { supabaseModeLabel, isSupabaseConfigured } from "@/lib/supabase";
 import { useProgress } from "@/lib/progress";
@@ -12,7 +12,6 @@ const links = [
   { href: "/editor", label: "Laboratório", icon: Braces },
   { href: "/projetos", label: "Projetos", icon: FolderKanban },
   { href: "/avaliacoes", label: "Avaliações", icon: Trophy },
-  { href: "/certificado", label: "Certificado", icon: Sparkles },
 ];
 
 export function AppShell({ children }: { children: ReactNode }) {
@@ -83,6 +82,5 @@ function getSectionLabel(path: string) {
   if (path.startsWith("/editor")) return "laboratório";
   if (path.startsWith("/projetos")) return "projetos";
   if (path.startsWith("/avaliacoes")) return "avaliações";
-  if (path.startsWith("/certificado")) return "certificado";
   return "perfil";
 }
